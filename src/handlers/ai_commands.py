@@ -13,10 +13,11 @@ router = Router()
 )
 async def echo_ai(message: Message):
     text = message.text.split('/ai', maxsplit=1)
+    text[1] = text[1].replace(" ", "", 1)
     response = await openai.Completion.acreate(
         engine="text-davinci-003",
         prompt=text[1],
-        max_tokens=4097-len(text[1]),
+        max_tokens=2500,
         n=1,
         stop=None,
         temperature=0.5,
