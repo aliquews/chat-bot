@@ -16,7 +16,7 @@ async def echo_ai(message: Message):
     print(text)
     response = await openai.Completion.acreate(
         engine="text-davinci-003",
-        prompt=text,
+        prompt=text[1],
         max_tokens=4000,
         n=1,
         stop=None,
