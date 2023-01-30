@@ -37,7 +37,7 @@ async def send_pic(message: Message, bot: Bot):
 async def answer_info_rand(message: Message):
     text = message.text.split('/info', maxsplit=1)
     print(text)
-    await message.answer(f'я думаю что {text[1].replace(" ","")} с вероятностью {random.randint(0, 100)}%')
+    await message.answer(f'я думаю что {text[1].replace(" ","", 1)} с вероятностью {random.randint(0, 100)}%')
 
 # @router.message(
 #     Text(text="!id")
