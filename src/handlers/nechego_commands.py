@@ -1,5 +1,5 @@
 import random
-import json
+import numpy as np
 
 from aiogram import Router, Bot
 from aiogram.filters import Text, Command
@@ -17,7 +17,8 @@ router = Router()
 )
 async def send_pic(message: Message, bot: Bot):
     global POSTS_COUNT
-    random_id = random.randint(0, POSTS_COUNT)
+    random_id = np.random.randint(low=0, high=POSTS_COUNT)
+    #random_id = random.randint(0, POSTS_COUNT)
     try:
         rand_message: Message = await bot.forward_message(chat_id=BUFFER_CHAT_ID, from_chat_id=CHANNEL_ID, message_id=random_id)
     except TelegramBadRequest:
