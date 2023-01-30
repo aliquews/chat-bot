@@ -15,8 +15,8 @@ async def echo_ai(message: Message):
     text = message.text.split('/ai', maxsplit=1)
     response = await openai.Completion.acreate(
         engine="text-davinci-003",
-        prompt=text,
-        max_tokens=2048,
+        prompt="<|endoftext|>"+text+"\n--\nLabel:",
+        max_tokens=4000,
         n=1,
         stop=None,
         temperature=0.5,
