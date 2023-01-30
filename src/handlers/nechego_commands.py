@@ -6,12 +6,7 @@ from aiogram.filters import Text, Command
 from aiogram.types import Message
 from aiogram.exceptions import TelegramBadRequest
 
-from stats import CHANNEL_ID, BUFFER_CHAT_ID
-
-POSTS_COUNT = 0
-with open("data/stats.json", "r") as file:
-    js_data = json.load(file)
-    POSTS_COUNT = js_data["POSTS_COUNT"]
+from stats import CHANNEL_ID, BUFFER_CHAT_ID, POSTS_COUNT
 
 
 router = Router()
