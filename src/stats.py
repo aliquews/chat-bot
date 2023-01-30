@@ -1,0 +1,3 @@
+CHANNEL_ID = -1001853045181 # My channel id, is may be changed
+POSTS_COUNT = 2403
+BUFFER_CHAT_ID = -1001794993515
