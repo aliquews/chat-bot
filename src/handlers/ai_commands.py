@@ -2,9 +2,9 @@ import openai
 from aiogram import Router
 from aiogram.types import Message
 from aiogram.filters import Command
+from load import OPENAI_API
 
-
-openai.api_key = "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"
+openai.api_key = OPENAI_API
 
 router = Router()
 

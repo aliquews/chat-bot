@@ -1,15 +1,14 @@
 import asyncio
 import logging
 from aiogram import Bot, Dispatcher
-from aiogram.types import Message
-from aiogram.filters import Text
 
 from handlers import commandsRouter
 from filters.chat_type import ChatTypeFilter
 
+from load import TELEGRAM_API
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(token="5917326295:AAG_sxuQ4DrEpOoP9tJx02uIAKnhwvZ9f9M")
+bot = Bot(token=TELEGRAM_API)
 dp = Dispatcher()
 
 
