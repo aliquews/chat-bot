@@ -7,3 +7,5 @@ load_dotenv(dotenv_path)
 
 OPENAI_API = os.environ.get("OPENAI")
 TELEGRAM_API = os.environ.get("TELEGRAM")
+
+print(type(OPENAI_API))

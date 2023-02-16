@@ -12,7 +12,7 @@ bot = Bot(token=TELEGRAM_API)
 dp = Dispatcher()
 
 
-dp.message.filter(ChatTypeFilter(chat_type=['private', 'group', 'supergroup']))
+# dp.message.filter(ChatTypeFilter(chat_type=['private', 'group', 'supergroup']))
 
 
 async def main():
